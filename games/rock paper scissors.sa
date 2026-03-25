@@ -180,7 +180,7 @@ class RockPaperScissors {
             "player_wins": player_wins,
             "computer_wins": computer_wins,
             "draws": this.draws,
-            "win_rate": (player_wins / this.rounds_played * 100).toFixed(1),
+            "win_rate": (this.rounds_played > 0 ? (player_wins / this.rounds_played * 100) : 0).toFixed(1),
             "choice_frequency": choice_frequency
         };
     }
@@ -527,7 +527,7 @@ class GameController {
         
         print("\nYour choice frequency:");
         for (let choice in stats.choice_frequency) {
-            let frequency = (stats.choice_frequency[choice] / stats.total_rounds * 100).toFixed(1);
+            let frequency = (stats.total_rounds > 0 ? (stats.choice_frequency[choice] / stats.total_rounds * 100) : 0).toFixed(1);
             print(choice + ":", frequency + "%");
         }
     }

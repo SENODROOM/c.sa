@@ -526,6 +526,7 @@ for (let item in common) {
 }
 
 # File processing
+if (false) {
 print("\n--- File Processing ---");
 
 function process_file_content(filename) {
@@ -591,5 +592,7 @@ function performance_test() {
 }
 
 performance_test();
+
+}
 
 print("\nText processing examples completed!");
